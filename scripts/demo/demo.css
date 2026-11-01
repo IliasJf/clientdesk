@@ -1,0 +1,37 @@
+/* The demo strip sits above the app and follows its theme. */
+.demo-badge {
+  position: sticky;
+  top: 0;
+  height: 35px;
+  z-index: 40;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 16px;
+  background: var(--primary);
+  color: var(--on-primary);
+  font-size: 12px;
+}
+.demo-badge button,
+.demo-badge a {
+  border: 0;
+  padding: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.demo-badge button:hover:not(:disabled) {
+  background: none;
+}
+/* The fixed sidebar starts below the strip. */
+.sidebar {
+  top: 35px;
+}
+@media (max-width: 520px) {
+  .demo-badge-more {
+    display: none;
+  }
+}
