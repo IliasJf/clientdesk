@@ -2,6 +2,8 @@
 
 A freelancer workspace for clients, projects and invoices. Built with React 19, TypeScript, a shared domain layer and persistent SQLite storage in the local demo.
 
+**[Try the live demo](https://iliasjf.github.io/clientdesk/)**: sample data, nothing to install. Changes stay in your browser.
+
 ![ClientDesk overview](docs/screenshots/overview.png)
 
 ## Run locally
@@ -47,7 +49,7 @@ Twelve automated tests cover calculations, invoice locking, issue-time seller an
 
 ## Hosting status
 
-The repository includes a Vinext/Cloudflare Worker adapter, D1 migration and Sites hosting manifest. **No hosted demo was deployed.** The production build encountered a Windows sandbox subprocess restriction (`spawn EPERM`); the publishing credential step was rejected by automatic approval review. The tested local preview uses a separate Rolldown build. Verify the Worker build and identity integration in a supported deployment environment before publishing.
+The repository includes a Vinext/Cloudflare Worker adapter, D1 migration and Sites hosting manifest. The [GitHub Pages demo](https://iliasjf.github.io/clientdesk/) is a static build (`node scripts/build-demo.mjs`) that runs the same domain code in the browser and saves to localStorage. **The Worker and D1 version has not been deployed.** The production build encountered a Windows sandbox subprocess restriction (`spawn EPERM`); the publishing credential step was rejected by automatic approval review. The tested local preview uses a separate Rolldown build. Verify the Worker build and identity integration in a supported deployment environment before publishing.
 
 `npm run dev` and `npm run build` target the Worker toolchain. They are separate from `preview:local`. The stored Sites project ID belongs to this creation session; create your own project before publishing a fork.
 
