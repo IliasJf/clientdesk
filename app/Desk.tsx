@@ -252,7 +252,12 @@ export default function Desk() {
     }
   }, []);
   useEffect(() => {
-    void load(true);
+    // Start the first load one microtask later, so no state is set during the effect itself.
+    const start = async () => {
+      await Promise.resolve();
+      await load(true);
+    };
+    void start();
     const read = () => {
       const v = location.hash.replace("#/", "");
       if (

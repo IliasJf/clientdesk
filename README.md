@@ -1,4 +1,5 @@
 # ClientDesk
+[![Checks](https://github.com/IliasJf/clientdesk/actions/workflows/ci.yml/badge.svg)](https://github.com/IliasJf/clientdesk/actions/workflows/ci.yml)
 
 A freelancer workspace for clients, projects and invoices. Built with React 19, TypeScript, a shared domain layer and persistent SQLite storage in the local demo.
 
